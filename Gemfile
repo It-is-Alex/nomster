@@ -13,8 +13,8 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'simple_form'
 
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'sprockets', '2.11.0'
+gem 'bootstrap-sass', '3.3.4.1'
+gem 'sprockets', '<= 2.11.0'
 gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
