@@ -39,17 +39,20 @@
 
 	<div class="clear"></div>
 	<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
-		<%= f.input :message %>
-		<%= f.input :rating %>
-		<%= f.submit "Add a Comment", class: "btn btn-primary" %>
+		<%= f.input :message %><br />
+		<%= f.input :rating, as: :select, collection: Comment::RATINGS %><br />
+		<%= f.submit "Add a Comment", class: "btn btn-primary" %><br /><br />
 	<% end %>
 
-
-	<h1>Comments</h1>
+	<h1>Comments</h1><br />
 	<% @place.comments.each do |c| %>
 		<div>
 			<blockquote>
-				<b><%= c.rating %></b> - <%= c.message %><small><%= c.user.email %></small>
+				<% if c.humanized_rating.present? %>
+					<b><%= c.humanized_rating %></b> - 
+				<% end %>
+				<%= c.message %>
+				<small><%= c.user.email %></small>
 			</blockquote>
 		</div>
 	<% end %>
