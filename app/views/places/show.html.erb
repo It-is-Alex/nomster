@@ -35,14 +35,18 @@
 			<%= link_to "Destroy", place_path(@place), method: :delete, data: {confirm: "Are you sure you want to delete this?"}, class: "btn btn-danger" %>
 		<% end %>
 	</div>
+</div>
 	<br /><br />
 
-
-
-	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-	  Add a Comment
-	</button>
+	<div class="clear">
+	<div class="col-xs-10 col-xs-offset-1">	
+		<h1 class="clear pull-left">Comments</h1>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
+		  Add a Comment
+		</button>
+	</div>
+	<div class="clear">
 
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -66,9 +70,9 @@
 	  </div>
 	</div>
 
-	<h1 class="clear">Comments</h1><br />
+	
 	<% @place.comments.each do |c| %>
-		<div>
+		<div class="col-xs-12 col-sm-6">
 			<blockquote>
 				<% if c.humanized_rating.present? %>
 					<b><%= c.humanized_rating %></b> - 
