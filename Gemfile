@@ -17,6 +17,9 @@ gem 'simple_form'
 # For use converting addresses into lat./long.
 gem 'geocoder'
 
+# For image uploading
+gem 'carrierwave'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '3.3.4.1'
 gem 'sprockets', '<= 2.11.0'

@@ -20,6 +20,12 @@
 			</div>
 		<% end %>
 
+		<% if place.photos.present? %>
+			<div class="col-xs-3">
+				<%= image_tag place.photos.last.picture, :width => 100, :height => 100 %>
+			</div>
+		<% end %>
+
 	</div>
 <% end %>
 
