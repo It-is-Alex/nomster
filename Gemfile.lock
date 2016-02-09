@@ -150,7 +150,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 1.2)
   jquery-rails
-  pg
+  pg (~> 0.18.4)
   rails (= 4.0.1)
   rails_12factor
   sass-rails
